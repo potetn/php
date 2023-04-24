@@ -1,0 +1,19 @@
+body {
+
+    background-color: darkseagreen;
+}
+
+
+@keyframes rotation {
+    from {
+        transform: scale(100%);
+    }
+
+    to{
+        transform: scale(120%);
+    }
+}
+
+.forside_bilde:hover {
+    animation: rotation 1s linear forwards
+}
