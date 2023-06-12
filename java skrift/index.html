@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Min overskrift</h1>
+    <h3 id="mitt_tall"></h3>
+    <p id="p_tag">litt tekst om poteter</p>
+    <p class="p_class">litt mer og annen tekst om poteter</p>
+    <button id="button">DO NOT PRESS</button>
+
+    <script>
+        
+        var EL_p_tag = document.querySelector('#p_tag')
+        var EL_tall = document.querySelector('#mit_tall')
+         
+
+        var tall = Math.random();
+
+        
+            document.querySelector('#p_tag').innerHTML = 'endret tekst'
+            
+            var tall = Math.floor(Math.random() * 10)
+            function skriv_tekst(){
+               console.log(tall)
+               var tall = Math.floor(Math.random() * 10);
+
+                if (tall > 5) {
+                document.querySelector('#p_tag').innerHTML = 'tall høyere enn 5'
+                } else if (tall < 5){
+                document.querySelector('#p_tag').innerHTML = 'tall lavere enn 5'
+                }
+            }     document.querySelector('#mitt_tall').innerHTML = tall
+
+        // velgeb
+        document.querySelector('#button').addEventListener('click', skriv_tekst )
+
+
+        var texst = "potet";
+        //document.write(tekst)
+        console.log("dette er en console beskjed")
+        var hemmelig_passord = "Mitt_passord1"
+
+    </script>
+</body>
+</html>

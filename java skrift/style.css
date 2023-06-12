@@ -1,0 +1,24 @@
+body{ background-image: url("click.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#knapp {position: relative;
+         left: 50px;
+         top: 60px;
+    /*
+    position: relative;
+    left: 240px;
+    top: 190px;
+    */
+}
+.grid {display: grid;
+    place-items: center;
+    height: 1000px;
+
+}
+
+#knapp2 {position: relative;
+       left: 350px;
+        top: 110px;
+}

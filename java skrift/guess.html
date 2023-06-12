@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equi="X-ua-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Guess the number game
+    - maskinen må lage et tilfeldig tall, 1-100 ?
+    - brukeren må kunne skrive inn hvilket tall som gjettes
+    - en knapp for å "sende" tallet
+    - når knappen trykkes må vi hente verdien fra feltet vi skriver tallet inn
+    - finne ut om tallet var riktig, for høyt eller for lavt
+    - tilbakemelding til brukeren, skriver ut en beskjed
+    - Mer funksjonalitet?
+    - Restart funksjon
+       
+    - Antall forsøk
+    - Score
+    - begrense forsøk
+    -->
+    <h1>Guess the number</h1>
+    <p id="tilbakemelding"></p>
+    <h2 id="timer">Tid: 0 sec</h2>
+
+    <input id="gjette_felt" type="text">
+    <button id="gjette_knapp">Gjett</button>
+    <button id="restart_knapp">restart</button>
+    
+
+    <script>
+        var knapp2 = document.querySelector('#restart_knapp')
+        var gjette_felt = document.querySelector('#gjette_felt')
+        var knapp = document.querySelector('#gjette_knapp')
+        var EL_timer = document.querySelector('#timer')
+        var tilbakemelding = document.querySelector('#tilbakemelding')
+        var stopp = false
+         
+        function gjett(){ // funksjon som kjører nå vi trykker på knapp
+            // hente tallet vi skrev inn
+
+            gjettet_tall = gjette_felt.value
+            if (gjettet_tall == tilfeldig_tall ){
+                stopp = true
+                tilbakemelding.innerHTML = 'Du gjettet riktig'
+            }
+            if (gjettet_tall == tilfeldig_tall){
+                 
+            }
+            else if (gjettet_tall > tilfeldig_tall){
+                tilbakemelding.innerHTML = 'Du gjettet for høyt prøv lavere tall'//tilbakemelding
+            }
+            else if (gjettet_tall < tilfeldig_tall){
+                tilbakemelding.innerHTML = 'Du gjettet for lavt,prøv et høyere tall'//tilbakemelding
+            }
+
+        }
+           function restart(){
+            //hva må skje her?
+            
+            // sette nytt tilfeldig tall
+
+            // stopp må bli false
+        }  
+        knapp.addEventListener('click',gjett)
+        knapp2.addEventListener('click',restart)
+ 
+        var tilfeldig_tall = Math.floor(Math.random()*100)
+        console.log(tilfeldig_tall)
+        // definere funksjonen
+        var teller = 0
+        function myTimer(){
+            console.log('timer: '+ teller)
+            if (stopp == false){
+            teller++}
+            EL_timer.innerHTML = "Tid: " + teller + " sec"
+        
+        }
+            
+        setInterval(myTimer, 1000) // kjører funksjonen myTimer hvert sekund, (1000ms)
+    
+     
+
+    </script>
+</body>
+</html>

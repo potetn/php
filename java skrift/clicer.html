@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <!-- clicker game
+        navn på game er king of click.
+        king taks town to oppgrade it to get more money.
+        opgraderingene har foselige priser
+    
+    -->
+    <article class="grid">
+    <div>
+
+        <button id="knapp"><img width="50px" height="50px" src="Asset 3.png"></button>
+        
+        <button id="knapp2"><img width="150px" height="150px" src="Skjermbilde.PNG"></button>
+         <h1 id="tall">0</h1>
+
+    </div>
+    </article>
+
+
+    
+
+
+
+
+<script>
+ var EL_teller = document.querySelector('#tall')
+var knapp = document.querySelector('#knapp')
+var tall = 0
+
+
+function teller(){                        
+ tall++
+ EL_teller.innerHTML = tall
+}
+knapp.addEventListener('click',teller)
+
+</script>
+          
+</body>
+</html>
